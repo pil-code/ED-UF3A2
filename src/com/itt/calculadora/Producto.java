@@ -7,7 +7,7 @@ package com.itt.calculadora;
  * 
  * @author Pilar Navío Colón
  * @since 17/01/2021
- * @version 1.4
+ * @version 1.5
  * @see com.itt.calculadora
  *
  */
@@ -28,7 +28,7 @@ public final class Producto {
 	 * 	
 	 */
 	public static float productoDosReales (float oper1, float oper2){
-		return 0.0F;
+		return oper1*oper2;
 	}
 	
 	
@@ -43,7 +43,7 @@ public final class Producto {
 	 * 	
 	 */
 	public static int productoDosEnteros (int oper1, int oper2){
-		return 0;
+		return oper1*oper2;
 	}
 	
 	
@@ -60,7 +60,7 @@ public final class Producto {
 	 * 	
 	 */
 	public static float productoTres (float oper1, float oper2, float oper3){
-		return 0.00F;
+		return oper1*oper2*oper3;
 	}
 	
 	
@@ -71,7 +71,7 @@ public final class Producto {
 	 * 
 	 * @param exp Exponente: Número de veces que se multiplica la base. Es un número entero (int). <br>
 	 * 
-	 * @return Resultado de multiplicar base tantas veces como se indique en exp. Es un número entero (long). <br>
+	 * @return Resultado de multiplicar base tantas veces como se indique en exp. Es un número entero (double). <br>
 	 * 			Por ejemplo: int base=5, int exp=4 <br>
 	 * 			El resultado será el producto de: 5*5*5*5 <p>
 	 * 
@@ -83,7 +83,7 @@ public final class Producto {
 	 * Si la base es un número negativo, el signo del resultado depende de si el exponente es par, en cuyo caso el signo será positivo, o impar, resultando en negativo. <p>
 	 * 			
 	 */
-	public static long potencia (int base, int exp){
-		return 0L;
+	public static double potencia (int base, int exp){
+		return Math.pow(base, exp);
 	}
 }
