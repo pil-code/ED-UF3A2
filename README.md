@@ -18,3 +18,16 @@ Estos pasos sólo se han realizado una vez.
 7. He cambiado a la rama main: git checkout main
 8. He hecho merge con mi rama local: git merge Pil.
 9. He guardado los cambios en el repositorio remoto: git push origin Pil:Pilar. La rama Pilar es la que será visible en Github.
+
+#### Actualización de la clase Producto
+1. He descargado los cambios del repositorio remoto: git pull
+2. Me posiciono en la rama de mi repositorio local llamada Pil: git checkout Pil
+3. He realizado los ajustes en el README.md.
+4. Consulto cuáles son los archivos que he modificado mediante el comando git status
+5. He añadido todos los archivos que se han modificado al stage: git add .
+6. He realizado un commit para el cambio realizado con git commit -m "Actualización en el README con los pasos de la clase Producto".
+7. He cambiado a la rama main: git checkout main
+8. He hecho merge con mi rama local: git merge Pil
+9. He guardado los cambios en el repositorio remoto: git push origin Pil:Pilar. (La rama Pilar es la que será visible en GitHub).
+10. En GitHub, he hecho un pull request desde mi rama a la rama main con título: "Actualización en el README con los pasos de la clase Producto".
+11. En GitHub, he hecho el merge automático a main desde Pilar.
