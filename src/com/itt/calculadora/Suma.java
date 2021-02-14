@@ -7,7 +7,7 @@ package com.itt.calculadora;
  * Esta clase pertenece al paquete {@link com.itt.calculadora}, que reune varias clases para realizar distintas operaciones matemáticas.
  * 
  * @author Jana Montero Perales
- * @version 1.4
+ * @version 2.0
  * @since 17-01-2021
  * @see com.itt.calculadora 
  * 
@@ -34,7 +34,7 @@ public final class Suma {
 	 * @see Resta
 	 */
 	public static double sumaReales(double oper1, double oper2) {
-		return 0.0;
+		return oper1 + oper2;
 	}
 	
 	/**
@@ -49,7 +49,7 @@ public final class Suma {
 	 * @see Resta
 	 */
 	public static int sumaEnteros(int oper1, int oper2) {
-		return 0;
+		return oper1 + oper2;
 	}	
 	
 	/**
@@ -66,7 +66,7 @@ public final class Suma {
 	 *  
 	 */
 	public static double sumaTres(double oper1, double oper2, double oper3) {
-		return 0.0;
+		return oper1 + oper2 + oper3;
 	}
 	
 	/**
@@ -82,5 +82,6 @@ public final class Suma {
 	 * @see suma_acumulada
 	 */
 	public static void sumaAcumulada(double oper) {
+		Suma.suma_acumulada += oper;
 	}	
 }
