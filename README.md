@@ -31,3 +31,13 @@ Estos pasos sólo se han realizado una vez.
 9. He guardado los cambios en el repositorio remoto: git push origin Pil:Pilar. (La rama Pilar es la que será visible en GitHub).
 10. En GitHub, he hecho un pull request desde mi rama a la rama main con título: "Actualización en el README con los pasos de la clase Producto".
 11. En GitHub, he hecho el merge automático a main desde Pilar.
+
+#### Actualización de la clase Resta
+1.He añadido el repositorio remoto a mi repositorio local: git clone URL.
+2.He creado una rama en mi repositorio local llamada Paula, en la que trabajaré sobre la clase RESTA y PRINCIPAL.
+3.He realizado los cambios oportunos en Eclipse, tanto implementación del código como modificación del archivo README.
+4.He añadido los archivos modificados (aquellos que se indican por consola).
+5.He hecho un commit: git commit -m "Actualización de la clase RESTA y README"
+6.He cambiado a la rama main: git checkout main, y he hecho merge con mi rama local: git merge resta.
+7.Para guardar los cambios en el repositorio remoto, primero he hecho un git push origin resta:Resta-Paula, siendo Resta-Paula la rama que se va a crear en Github con este comando.
+8.Una vez en Github, he hecho un pull request desde mi rama a main para, posteriormente, realizar un merge.
