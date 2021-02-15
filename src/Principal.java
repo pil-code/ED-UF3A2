@@ -18,24 +18,42 @@ public class Principal {
 		System.out.println();
 		//1. Suma.sumaReales()
 		System.out.println("Suma.sumaReales():\n--------------------------------------------------------");
-		double real1 = rand.nextInt(2000) - 1000 + rand.nextDouble();
-		double real2 = rand.nextInt(2000) - 1000 + rand.nextDouble();
-		double sumaReales = Suma.sumaReales(real1, real2);
-		System.out.println("real1 = " + real1);
-		System.out.println("real2 = " + real2);
-		System.out.println("Suma.sumaReales(real1, real2) = " + sumaReales);
-		System.out.println("--------------------------------------------------------\n");
-		
-		
+		double sumaReal1 = rand.nextInt(2000) - 1000 + rand.nextDouble();
+		double sumaReal2 = rand.nextInt(2000) - 1000 + rand.nextDouble();
+		double sumaReales = Suma.sumaReales(sumaReal1, sumaReal2);
+		System.out.println("oper1 = " + String.format("%.2f", sumaReal1));
+		System.out.println("oper2 = " + String.format("%.2f", sumaReal2));
+		System.out.println("Suma.sumaReales(oper1, oper2) = " +  String.format("%.2f", sumaReales));
+		System.out.println("--------------------------------------------------------\n");		
 		//2. Suma.sumaEnteros()
 		System.out.println("Suma.sumaEnteros():\n--------------------------------------------------------");
-		int entero1 = rand.nextInt(2000) - 1000;
-		int entero2 = rand.nextInt(2000) - 1000;
-		int sumaEnteros = Suma.sumaEnteros(entero1, entero2);
-		System.out.println("entero1 = " + entero1);
-		System.out.println("entero2 = " + entero2);
-		System.out.println("Suma.sumaEnteros(entero1, entero2) = " + sumaEnteros);
+		int sumaEntero1 = rand.nextInt(2000) - 1000;
+		int sumaEntero2 = rand.nextInt(2000) - 1000;
+		int sumaEnteros = Suma.sumaEnteros(sumaEntero1, sumaEntero2);
+		System.out.println("oper1 = " + sumaEntero1);
+		System.out.println("oper2 = " + sumaEntero2);
+		System.out.println("Suma.sumaEnteros(oper1, oper2) = " + sumaEnteros);
 		System.out.println("--------------------------------------------------------\n");
+		//3. Suma.sumaTres()
+		System.out.println("Suma.sumaTres():\n--------------------------------------------------------");
+		sumaReal1 = rand.nextInt(2000) - 1000 + rand.nextDouble();
+		sumaReal2 = rand.nextInt(2000) - 1000 + rand.nextDouble();
+		double sumaReal3 = rand.nextInt(2001) - 1000 + rand.nextDouble();
+		double sumaTres = Suma.sumaTres(sumaReal1, sumaReal2, sumaReal3);
+		System.out.println("oper1 = " + String.format("%.2f", sumaReal1));
+		System.out.println("oper2 = " + String.format("%.2f", sumaReal2));
+		System.out.println("oper3 = " + String.format("%.2f", sumaReal3));
+		System.out.println("Suma.sumaTres(oper1, oper2, oper3) = " + String.format("%.2f", sumaTres));
+		System.out.println("--------------------------------------------------------\n");
+		//4. Suma.sumaAcumulada()
+		System.out.println("Suma.sumaAcumulada():\n--------------------------------------------------------");
+		System.out.println("Estado inicial:\nsuma_acumulada = " + Suma.suma_acumulada);
+		double sumaAcum = rand.nextInt(2001) - 1000 + rand.nextDouble();
+		System.out.println("Cantidad a sumar = " + String.format("%.2f", sumaAcum));
+		Suma.sumaAcumulada(sumaAcum);
+		System.out.println("Estado final:\nsuma_acumulada = " + String.format("%.2f", Suma.suma_acumulada));
+		System.out.println("--------------------------------------------------------\n");
+				
 		
 		/*
 		 * Código para demostrar el uso de los métodos de la clase Cociente
