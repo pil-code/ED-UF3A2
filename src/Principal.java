@@ -67,11 +67,11 @@ public class Principal {
 		
 		//1. Cociente.dividirReales()
 		System.out.println("Cociente.dividirReales():\n--------------------------------------------------------");
-		double real3 = rand.nextInt(2000) - 1000 + rand.nextDouble();
-		double real4 = rand.nextInt(2000) - 1000 + rand.nextDouble();
-		double dividirReales = Cociente.dividirReales(real3, real4);
-		System.out.println("real3 = " + real3);
-		System.out.println("real4 = " + real4);
+		double cocienteReal1 = rand.nextInt(2000) - 1000 + rand.nextDouble();
+		double cocienteReal2 = rand.nextInt(2000) - 1000 + rand.nextDouble();
+		double dividirReales = Cociente.dividirReales(cocienteReal1, cocienteReal2);
+		System.out.println("oper1 = " + cocienteReal1);
+		System.out.println("oper2 = " + cocienteReal2);
 		System.out.println("Cociente.dividirReales(real3, real4) = " + dividirReales);
 		System.out.println("--------------------------------------------------------\n");
 	}
