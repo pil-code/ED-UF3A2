@@ -1,4 +1,6 @@
+
 import com.itt.calculadora.Suma; //importar la clase Suma para poder usar sus métodos
+import com.itt.calculadora.Cociente; //importar la clase Cociente para poder usar sus métodos
 import java.util.Random;
 
 public class Principal {
@@ -23,6 +25,8 @@ public class Principal {
 		System.out.println("real2 = " + real2);
 		System.out.println("Suma.sumaReales(real1, real2) = " + sumaReales);
 		System.out.println("--------------------------------------------------------\n");
+		
+		
 		//2. Suma.sumaEnteros()
 		System.out.println("Suma.sumaEnteros():\n--------------------------------------------------------");
 		int entero1 = rand.nextInt(2000) - 1000;
@@ -31,6 +35,26 @@ public class Principal {
 		System.out.println("entero1 = " + entero1);
 		System.out.println("entero2 = " + entero2);
 		System.out.println("Suma.sumaEnteros(entero1, entero2) = " + sumaEnteros);
+		System.out.println("--------------------------------------------------------\n");
+		
+		/*
+		 * Código para demostrar el uso de los métodos de la clase Cociente
+		 */
+		
+		System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+		System.out.println("Demos de la clase Cociente");
+		System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+		System.out.println();
+		
+		
+		//1. Cociente.dividirReales()
+		System.out.println("Cociente.dividirReales():\n--------------------------------------------------------");
+		double real3 = rand.nextInt(2000) - 1000 + rand.nextDouble();
+		double real4 = rand.nextInt(2000) - 1000 + rand.nextDouble();
+		double dividirReales = Cociente.dividirReales(real3, real4);
+		System.out.println("real3 = " + real3);
+		System.out.println("real4 = " + real4);
+		System.out.println("Cociente.dividirReales(real3, real4) = " + dividirReales);
 		System.out.println("--------------------------------------------------------\n");
 	}
 
