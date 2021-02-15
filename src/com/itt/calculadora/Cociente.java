@@ -57,18 +57,18 @@ public final class Cociente {
 	}
 	
 /**
- *  Este método implementará la inversión de un número entero.
+ *  Este método implementará el inverso de un número entero.
  *  
  *  @param oper Representa el número que vas a invertir
  *  
- *  @return El resultado será la inversión del número.
+ *  @return El resultado será la inversión del número introducido.
  *  <p>  
- *  Ejemplo: si se introduce el valor 345, el método devolverá 543.
+ *  Ejemplo: si se introduce el valor 10 = 10/1, el método devolverá 1/10 = 0.1.
  * 
  */
-	public int invertirNum (int oper) {
+	public float invertirNum (int oper) {
 
-		return 0;
+		return 1/oper;
 	}
 	
 /**
