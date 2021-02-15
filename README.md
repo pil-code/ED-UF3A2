@@ -52,3 +52,15 @@ Estos pasos sólo se han realizado una vez.
 7.He hecho uhn push a mi rama en github con git push origin Cociente-Ixchel:Cociente-Ixchel, siendo Cociente-Ixchel el nombre de mi rama remota creada en ese momento. 
 8.En github, he hecho un pull request desde mi rama a la rama main. 
 9.En github, he hecho el merge automático a main desde Cociente-Ixchel. 
+
+#### Actualización de la clase Suma
+1. He clonado el repositorio en mi sistema local con el comando git clone https://github.com/pil-code/ED-UF3A2/. 
+2. He creado una rama en mi repositorio local y me he movido a ella directamente con el comando git checkout -b suma-Jana. 
+3. He completado la clase Suma en mi entorno local con Eclipse.
+4. He añadido los archivos modificados al stage con git add . 
+5. He realizado un commit para la actualización cambio con git commit -m "clase Suma completa"
+6. He hecho un push a mi rama en github con git push origin suma-Jana
+7. En github, he hecho un pull request desde mi rama a la rama main. 
+8. En github, he hecho el merge automático a main desde suma-Jana. 
+9. Para los siguientes cambios, me he asegurado de hacer un pull del repositorio antes de comenzar a trabajar con el comando git pull origin main.
+10. El seguido los mismos pasos para las siguientes actualizaciones (siempre a mi rama en github, y haciendo merge desde allí). Como estas se han realizado en archivos en los que el resto del equipo estaba trabajando simultáneamente (README.md y clase Principal), me he asegurado de que los commit fuese especialmente descriptivos. También he avisado al resto del equipo antes de cada push y cada merge.
