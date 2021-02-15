@@ -53,7 +53,7 @@ public final class Cociente {
  *
  */
 	public float dividirEnteros (int oper1,int oper2) {
-		return 0F;
+		return oper1/oper2;
 	}
 	
 /**
