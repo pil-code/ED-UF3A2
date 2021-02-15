@@ -58,7 +58,6 @@ public class Principal {
 		/*
 		 * Código para demostrar el uso de los métodos de la clase Cociente
 		 */
-		
 		System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
 		System.out.println("Demos de la clase Cociente");
 		System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
@@ -70,10 +69,36 @@ public class Principal {
 		double cocienteReal1 = rand.nextInt(2000) - 1000 + rand.nextDouble();
 		double cocienteReal2 = rand.nextInt(2000) - 1000 + rand.nextDouble();
 		double dividirReales = Cociente.dividirReales(cocienteReal1, cocienteReal2);
-		System.out.println("oper1 = " + cocienteReal1);
-		System.out.println("oper2 = " + cocienteReal2);
-		System.out.println("Cociente.dividirReales(real3, real4) = " + dividirReales);
+		System.out.println("oper1 = " + String.format("%.2f",cocienteReal1));
+		System.out.println("oper2 = " + String.format("%.2f",cocienteReal2));
+		System.out.println("Cociente.dividirReales(real3, real4) = " + String.format("%.2f",dividirReales));
 		System.out.println("--------------------------------------------------------\n");
+		
+	
+		//2. Cociente.dividirEnteros
+		System.out.println("Cociente.dividirEnteros():\n--------------------------------------------------------");
+		int cocienteEntero1 = rand.nextInt(2000) - 1000;
+		int cocienteEntero2 = rand.nextInt(2000) - 1000;
+		double dividirEnteros = Cociente.dividirEnteros(sumaEntero1, sumaEntero2);
+		System.out.println("oper1 = " + cocienteEntero1);
+		System.out.println("oper2 = " + cocienteEntero2);
+		System.out.println("Cociente.cocienteEnteros(oper1, oper2) = " + String.format("%.2f",dividirEnteros));
+		System.out.println("--------------------------------------------------------\n");
+		
+		//3. Cociente.invertirNum
+		System.out.println("Cociente.invertirNum():\n--------------------------------------------------------");
+		int invertido = rand.nextInt(2000) - 1000;
+		double invertirNum = Cociente.invertirNum(invertido);
+		System.out.println("oper = " + invertido);
+		System.out.println("Cociente.invertirNum(oper) = " + String.format("%.6f",invertirNum));
+		System.out.println("--------------------------------------------------------\n");
+		
+		//4. Cociente.raizCuadrada
+		System.out.println("Cociente.raizCuadrada():\n--------------------------------------------------------");
+		double entRaiz = rand.nextInt(2000) - 1000 + rand.nextDouble();
+		double raizCuadrada = Cociente.raizCuadrada(entRaiz);
+		System.out.println("oper = " + String.format("%.2f",entRaiz));
+		System.out.println("Cociente.raizCuadrada(oper) = " + String.format("%.2f",raizCuadrada));
 	}
 
 }

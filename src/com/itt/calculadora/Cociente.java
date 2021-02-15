@@ -52,8 +52,8 @@ public final class Cociente {
  * <p> 
  *
  */
-	public double dividirEnteros (int oper1,int oper2) {
-		return oper1/oper2;
+	public static double dividirEnteros (int oper1,int oper2) {
+		return (double) oper1/oper2;
 	}
 	
 /**
@@ -66,9 +66,9 @@ public final class Cociente {
  *  Ejemplo: si se introduce el valor 10 = 10/1, el método devolverá 1/10 = 0.1.
  * 
  */
-	public double invertirNum (int oper) {
+	public static double invertirNum (int oper) {
 
-		return 1/oper;
+		return (double) 1/oper;
 	}
 	
 /**
@@ -82,7 +82,7 @@ public final class Cociente {
  *  Si el argumento es 0 el resultado es 0.<br>
  *  Si el argumento negativo, el resultado es NaN. <br>
  */
-	public double raizCuadrada (double oper) {
+	public static double raizCuadrada (double oper) {
 		return Math.sqrt(oper);
 	}
 }
