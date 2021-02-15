@@ -83,6 +83,6 @@ public final class Cociente {
  *  Si el argumento negativo, el resultado es NaN. <br>
  */
 	public double raizCuadrada (double oper) {
-		 return 0.0;
+		return Math.sqrt(oper);
 	}
 }
