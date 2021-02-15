@@ -41,3 +41,14 @@ Estos pasos sólo se han realizado una vez.
 6.He cambiado a la rama main: git checkout main, y he hecho merge con mi rama local: git merge resta.
 7.Para guardar los cambios en el repositorio remoto, primero he hecho un git push origin resta:Resta-Paula, siendo Resta-Paula la rama que se va a crear en Github con este comando.
 8.Una vez en Github, he hecho un pull request desde mi rama a main para, posteriormente, realizar un merge.
+
+#### Actualización de la clase Cociente
+1.He añadido el repositorio remoto al mío local con el comando: git clone https://github.com/pil-code/ED-UF3A2/. 
+2.He creado una rama en mi repositorio local llamada Cociente-Ixchel. 
+3.He ido realizando los cambios en la clase Cociente en Eclipse.
+4.He actualizado el método invertirNum puesto que en la corrección del ejercicio 1, se me indicó que la inversión no estaba bien planteada. 
+5.He añadido los archivos modificados al stage con git add . 
+6.He realizado un commit para cada cambio con git commit -m "El nombre de la actualización". 
+7.He hecho uhn push a mi rama en github con git push origin Cociente-Ixchel:Cociente-Ixchel, siendo Cociente-Ixchel el nombre de mi rama remota creada en ese momento. 
+8.En github, he hecho un pull request desde mi rama a la rama main. 
+9.En github, he hecho el merge automático a main desde Cociente-Ixchel. 
