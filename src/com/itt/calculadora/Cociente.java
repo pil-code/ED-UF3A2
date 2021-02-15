@@ -36,7 +36,7 @@ public final class Cociente {
  *
  */
 	public static float dividirReales (float oper1, float oper2) {
-		return 0.0F ;
+		return oper1/oper2 ;
 	}
 	
 /**
