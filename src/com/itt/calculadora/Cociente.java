@@ -35,7 +35,7 @@ public final class Cociente {
  * 
  *
  */
-	public static float dividirReales (float oper1, float oper2) {
+	public static double dividirReales (double oper1, double oper2) {
 		return oper1/oper2 ;
 	}
 	
@@ -52,7 +52,7 @@ public final class Cociente {
  * <p> 
  *
  */
-	public float dividirEnteros (int oper1,int oper2) {
+	public double dividirEnteros (int oper1,int oper2) {
 		return oper1/oper2;
 	}
 	
@@ -66,7 +66,7 @@ public final class Cociente {
  *  Ejemplo: si se introduce el valor 10 = 10/1, el método devolverá 1/10 = 0.1.
  * 
  */
-	public float invertirNum (int oper) {
+	public double invertirNum (int oper) {
 
 		return 1/oper;
 	}
