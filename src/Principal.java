@@ -21,6 +21,7 @@ public class Principal {
 		System.out.println();
 		//1. Suma.sumaReales()
 		System.out.println("Suma.sumaReales():\n--------------------------------------------------------");
+		//Generar números aleatorios de tipo double entre -1000 y 1000 para actuar de operandos
 		double sumaReal1 = rand.nextInt(2000) - 1000 + rand.nextDouble();
 		double sumaReal2 = rand.nextInt(2000) - 1000 + rand.nextDouble();
 		double sumaReales = Suma.sumaReales(sumaReal1, sumaReal2);
@@ -30,6 +31,7 @@ public class Principal {
 		System.out.println("--------------------------------------------------------\n");		
 		//2. Suma.sumaEnteros()
 		System.out.println("Suma.sumaEnteros():\n--------------------------------------------------------");
+		//Generar números aleatorios entre -1000 y 999 para actuar de operandos
 		int sumaEntero1 = rand.nextInt(2000) - 1000;
 		int sumaEntero2 = rand.nextInt(2000) - 1000;
 		int sumaEnteros = Suma.sumaEnteros(sumaEntero1, sumaEntero2);
