@@ -1,6 +1,7 @@
 
 import com.itt.calculadora.Suma; //importar la clase Suma para poder usar sus métodos
 import com.itt.calculadora.Cociente; //importar la clase Cociente para poder usar sus métodos
+import com.itt.calculadora.Producto;
 import com.itt.calculadora.Resta;
 
 import java.util.Random;
@@ -147,6 +148,56 @@ public class Principal {
 		System.out.println("Estado final:\nresta_acumulada = " + String.format("%.2f", Resta.resta_acumulada));
 		System.out.println("--------------------------------------------------------\n");
 		
+		
+		/*
+		 * Código para demostrar el uso de los métodos de la clase Producto
+		 */
+		System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+		System.out.println("Demos de la clase Producto");
+		System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+		System.out.println();
+
+		//1. Producto.productoDosReales()
+		System.out.println("Producto.productoDosReales():\n--------------------------------------------------------");
+		float productoReal1 = rand.nextInt(2000) - 1000 + rand.nextFloat();
+		float productoReal2 = rand.nextInt(2000) - 1000 + rand.nextFloat();
+		float productoDosReales = Producto.productoDosReales(productoReal1, productoReal2);
+		System.out.println("oper1 = " + String.format("%.2f", productoReal1));
+		System.out.println("oper2 = " + String.format("%.2f", productoReal2));
+		System.out.println("Producto.productoDosReales(oper1, oper2) = " +  String.format("%.2f", productoDosReales));
+		System.out.println("--------------------------------------------------------\n");		
+		
+		//2. Producto.productoDosEnteros()
+		System.out.println("Producto.productoDosEnteros():\n--------------------------------------------------------");
+		int productoEntero1 = rand.nextInt(2000) - 1000;
+		int productoEntero2 = rand.nextInt(2000) - 1000;
+		int productoDosEnteros = Producto.productoDosEnteros(productoEntero1, productoEntero2);
+		System.out.println("oper1 = " + productoEntero1);
+		System.out.println("oper2 = " + productoEntero2);
+		System.out.println("Producto.productoDosEnteros(oper1, oper2) = " + productoDosEnteros);
+		System.out.println("--------------------------------------------------------\n");
+
+		//3. Producto.productoTres()
+		System.out.println("Producto.productoTres():\n--------------------------------------------------------");
+		productoReal1 = rand.nextInt(2000) - 1000 + rand.nextFloat();
+		productoReal2 = rand.nextInt(2000) - 1000 + rand.nextFloat();
+		float productoReal3 = rand.nextInt(2001) - 1000 + rand.nextFloat();
+		float productoTres = Producto.productoTres(productoReal1, productoReal2, productoReal3);
+		System.out.println("oper1 = " + String.format("%.2f", productoReal1));
+		System.out.println("oper2 = " + String.format("%.2f", productoReal2));
+		System.out.println("oper3 = " + String.format("%.2f", productoReal3));
+		System.out.println("Producto.productoTres(oper1, oper2, oper3) = " + String.format("%.2f", productoTres));
+		System.out.println("--------------------------------------------------------\n");
+
+		//4. Producto.potencia()
+		System.out.println("Producto.potencia():\n--------------------------------------------------------");
+		int base = rand.nextInt(2000) - 1000;
+		int exp = rand.nextInt(2000) - 1000;
+		System.out.println("base: " + base);
+		System.out.println("exponente: " + exp);
+		double potencia = Producto.potencia(base, exp);
+		System.out.println("Potencia = " + String.format("%.2f", potencia));
+		System.out.println("--------------------------------------------------------\n");
 	}
 
 }
