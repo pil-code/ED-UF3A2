@@ -104,7 +104,7 @@ public class Principal {
 		System.out.println("Cociente.raizCuadrada(oper) = " + String.format("%.2f",raizCuadrada));
 		
 		/*
-		 * Código para demostrar el uso de los métodos de la clase Cociente
+		 * Código para demostrar el uso de los métodos de la clase Resta
 		 */
 		System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
 		System.out.println("Demos de la clase Resta");
