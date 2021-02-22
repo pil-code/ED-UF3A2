@@ -71,7 +71,7 @@ public final class Suma {
 	
 	/**
 	 * Función que suma el número introducido como argumento a la variable estática suma_acumulada de la clase Suma. Por ejemplo:<br> 
-	 * Si el valor de suma_acumulada cuando se llama al método es 100.0, y el argumento con el que se le llama es 5.0, el valor de suma_acumulada tras su ejecución será 100.0 <br>
+	 * Si el valor de suma_acumulada cuando se llama al método es 100.0, y el argumento con el que se le llama es 5.0, el valor de suma_acumulada tras su ejecución será 105.0 <br>
 	 * Este método no devuelve ningún valor.
 	 * 
 	 * @param oper Representa el operando. Es un número real (double).
