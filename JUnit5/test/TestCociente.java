@@ -29,18 +29,17 @@ class TestCociente {
 	void testDividirReales() {
 		
 		//Tests de fuerza bruta con números aleatorios
-		for (int i = 0; i < 500; i ++) {
+		for (int i = 0; i < muestraDouble.length/2; i ++) {
 			double oper1 = muestraDouble[i];
-			double oper2 = muestraDouble[i + 500];
+			double oper2 = muestraDouble[i + muestraDouble.length/2];
 			assertEquals(oper1/oper2, Cociente.dividirReales(oper1, oper2), "Error al dividir " + oper1 + "/" + oper2);
-			
+
 			//Test cambiando el signo de uno de los operandos para asegurar que se han testeado
 			//tanto números positivos como negativos
 			oper2 = - oper2;
 			assertEquals(oper1/oper2, Cociente.dividirReales(oper1, oper2), "Error al dividir " + oper1 + "/" + oper2);
 			
 		}
-		
 		
 		//Tests de división por 0
 		assertEquals(Double.POSITIVE_INFINITY, Cociente.dividirReales(1, 0), "Error al dividir por cero: 1/0");
@@ -51,17 +50,63 @@ class TestCociente {
 
 	@Test
 	void testDividirEnteros() {
-		fail("Not yet implemented");
+		//TODO revisar la conversión a float de Cociente
+		//Tests de fuerza bruta con números aleatorios
+		for (int i = 0; i < muestraInt.length/2; i ++) {
+			int oper1 = muestraInt[i];
+			int oper2 = muestraInt[i + muestraInt.length/2];
+			assertEquals((float)(oper1)/oper2, Cociente.dividirEnteros(oper1, oper2), "Error al dividir "
+					+ "" + oper1 + "/" + oper2);
+			
+			//Test cambiando el signo de uno de los operandos para asegurar que se han testeado
+			//tanto números positivos como negativos
+			oper2 = - oper2;
+			assertEquals((float)(oper1)/oper2, Cociente.dividirEnteros(oper1, oper2), "Error al dividir " + oper1 + "/" + oper2);
+			
+		}
+		
+		//TODO revisar la división por 0 en Cociente
+		//Test de división por 0
+		assertThrows(ArithmeticException.class, () -> Cociente.dividirEnteros(1, 0));
+		assertThrows(ArithmeticException.class, () -> Cociente.dividirEnteros(0, 0));
 	}
 
 	@Test
 	void testInvertirNum() {
-		fail("Not yet implemented");
+		
+		//Tests de fuerza bruta con números aleatorios
+		for (int i = 0; i < muestraInt.length; i ++) {
+			int oper = muestraInt[i];
+			assertEquals(1.0/oper, Cociente.invertirNum(oper), "Error al invertir " + oper);
+			
+			//Test cambiando el signo de uno de los operandos para asegurar que se han testeado
+			//tanto números positivos como negativos
+			oper = - oper;
+			assertEquals(1.0/oper, Cociente.invertirNum(oper), "Error al invertir " + oper);		
+		}
+		
+		//TODO revisar la inversión de cero en Cociente
+		//Tests de inversión de 0 asumiendo que el comportamiento debe ser igual que Cociente.dividirEnteros(1, oper);
+		assertThrows(ArithmeticException.class, () -> Cociente.invertirNum(0));
 	}
 
 	@Test
 	void testRaizCuadrada() {
-		fail("Not yet implemented");
+		
+		//Test de fuerza bruta con números aleatorios positivos
+		for (int i = 0; i < muestraDouble.length; i++) {
+			double oper = Math.abs(muestraDouble[i]);
+			assertEquals(Math.sqrt(oper), Cociente.raizCuadrada(oper), 
+					"Error al calcular la raíz cuadrada de " + oper);
+			
+		}
+		
+		//Test de raíz cuadrada de 0
+		assertEquals(0.0, Cociente.raizCuadrada(0), "Error al calcular la raíz cuadrada de 0");
+		
+		//Test de raíz cuadrada de un número negativo
+		assertEquals(Double.NaN, Cociente.raizCuadrada(-1), 
+				"Error al calcular la raíz cuadrada de -1");
 	}
 
 }
