@@ -2,7 +2,10 @@ package test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import com.itt.calculadora.Cociente;
@@ -14,15 +17,32 @@ class TestCociente {
 	private static int[] muestraInt = new int[1000]; //muestra a rellenar con números enteros aleatorios 
 	private static float[] muestraFloat = new float[1000]; //muestra a rellenar con números reales aleatorios tipo float
 	private static double[] muestraDouble = new double[1000]; //muestra a rellenar con números reales aleatorios tipo double
+	private static int contadorTests = 0;
 	
 	@BeforeAll
-	public static void setSamples() {
+	static void setSamples() {
 		Random random = new Random();
 		for (int i = 0 ; i < 1000; i ++) {
 			muestraInt[i] = random.nextInt();
 			muestraFloat[i] = random.nextFloat();
 			muestraDouble[i] = random.nextDouble();
 		}
+	}
+	
+	@BeforeEach
+	void saludoTest() {
+		contadorTests += 1;
+		System.out.println("Comienzo del test número " + contadorTests);
+	}
+	
+	@AfterEach
+	void despedidaTest() {
+		System.out.println("Test número " + contadorTests + " finalizado");	
+	}
+	
+	@AfterAll
+	static void endTests() {
+		System.out.println("Se han completado " + contadorTests + " tests. Ha sido un placer testear con usted");
 	}
 
 	@Test
