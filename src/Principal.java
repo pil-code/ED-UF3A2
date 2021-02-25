@@ -200,6 +200,8 @@ public class Principal {
 		double potencia = Producto.potencia(base, exp);
 		System.out.println("Potencia = " + String.format("%.2f", potencia));
 		System.out.println("--------------------------------------------------------\n");
+		
+		
 	}
 
 }
