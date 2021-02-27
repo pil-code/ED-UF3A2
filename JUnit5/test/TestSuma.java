@@ -23,6 +23,7 @@ public class TestSuma {
 	 * Este método prepara muestras aleatorias de número de enteros (tipo int) y reales (tipo double)
 	 * para usar en los tests como argumentos de los métodos
 	 */
+	
 	@BeforeAll
 	public static void setSamples() {
 		Random random = new Random();
