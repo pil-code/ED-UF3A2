@@ -21,7 +21,6 @@ class TestProducto {
 	
 	private static int[] muestraInt = new int[1000]; //muestra a rellenar con números enteros aleatorios 
 	private static float[] muestraFloat = new float[1000]; //muestra a rellenar con números reales aleatorios tipo float
-	private static double[] muestraDouble = new double[1000]; //muestra a rellenar con números reales aleatorios tipo double
 	private static int contadorTests=0;
 	/**@BeforeAll
 	 * Este método prepara muestras aleatorias de número de enteros (tipo int) y reales (tipo double y float)
@@ -33,9 +32,8 @@ class TestProducto {
 	public static void setSamples() {
 		Random random = new Random();
 		for (int i = 0 ; i < 1000; i ++) {
-			muestraInt[i] = random.nextInt();
-			muestraFloat[i] = random.nextFloat();
-			muestraDouble[i] = random.nextDouble();
+			muestraInt[i] = random.nextInt(21)-10;
+			muestraFloat[i] = random.nextFloat()*21-10;
 		}
 	}
 	
@@ -125,15 +123,7 @@ class TestProducto {
 		assertEquals(oper1*oper2*oper3, Producto.productoTres(oper1, oper2, oper3));
 		}
 	}
-	
-	/*TODO Casos especiales:<br>
-	 * . Si la base es 0 y el exponente es 0, el resultado dará un error.<br>-->esperábamos que fuese un error, da 1
-	 * . Si el exponente es 0, el resultado será 1.<br>
-	 * . Si el exponente es 1, el resultado será igual a la base.<br>
-	 * . Si la base es 0, el resultado será 0.<br>
-	 * Si la base es un número negativo, el signo del resultado depende de si el exponente es par, 
-	 en cuyo caso el signo será positivo, o impar, resultando en negativo
-	*/	
+		
 	
 	/**
 	 * Este test va a probar el método potencia de la clase Producto.
@@ -142,10 +132,12 @@ class TestProducto {
 	 */
 	@Test
 	void testPotencia() {
-		for (int i = 0; i < muestraInt.length/2; i ++) {
-			int base = muestraInt[i];
-			int exp = muestraInt[i + muestraInt.length/2];
-		assertEquals(Math.pow(base, exp), Producto.potencia(base, exp), "Error");
+		int base[]= {2,3,4,5};
+		int exp[]= {2,3,4,5};
+		for (int i=0; i<base.length; i++) {
+			for (int j=0; j<exp.length; j++) {
+			assertEquals(Producto.potencia(base[i], exp[j]), Math.pow(base[i], exp[j]), "Error");
+			}
 		}
 	}
 	
@@ -154,10 +146,10 @@ class TestProducto {
 	 * Si la base es 0 y el exponente es 0, el resultado dará un error.
 	 */
 	@Test
-	void testPotenciaBase0Exp0() {//throws exception
+	void testPotenciaBase0Exp0() {
 		int base=0;
 		int exp=0;
-		assertEquals(Math.pow(base, exp), Producto.potencia(base, exp), "Error");
+		assertThrows(ArithmeticException.class, () -> Producto.potencia(base, exp), "Error");
 	}
 	
 	/**
@@ -166,11 +158,12 @@ class TestProducto {
 	 */
 	@Test
 	void testPotenciaExp0() {
-		for (int i = 0; i < muestraInt.length; i ++) {
-			int base = muestraInt[i];
-			int exp=0;
-			assertEquals(Math.pow(base, exp), 1, "El resultado es distinto de 1");
+		int base[]= {2,3,4,5};
+		int exp=0;
+		for (int i=0; i<base.length; i++) {
+			assertEquals(1, Math.pow(base[i], exp), "El resultado es distinto de 1");
 		}
+		
 	}
 	
 	/**
@@ -179,10 +172,10 @@ class TestProducto {
 	 */
 	@Test
 	void testPotenciaExp1() {
-		for (int i = 0; i < muestraInt.length; i ++) {
-			int base = muestraInt[i];
-			int exp=1;
-			assertEquals(Math.pow(base, exp), base, "El resultado es distinto de la base");
+		int base[]= {2,3,4,5};
+		int exp=1;
+		for (int i=0; i<base.length; i++) {
+			assertEquals(base[i], Math.pow(base[i], exp), "El resultado es distinto de la base");
 		}
 
 	}
@@ -193,11 +186,12 @@ class TestProducto {
 	 */
 	@Test
 	void testPotenciaBase0() {
-		for (int i = 0; i < muestraInt.length; i ++) {
-			int base = 0;
-			int exp=muestraInt[i];
-			assertEquals(Math.pow(base, exp), base, "El resultado es distinto de 0");
+		int base=0;
+		int exp[]= {2, 3, 4, 5};
+		for (int i=0; i<exp.length; i++) {
+			assertEquals(0, Math.pow(base, exp[i]), "El resultado es distinto de 0");
 		}
+			
 	}
 	
 	/**
@@ -206,10 +200,16 @@ class TestProducto {
 	 * en cuyo caso el signo será positivo, o impar, resultando en negativo
 	 */
 	@Test
-	void testPotenciaBaseNegativa() {//Falta completar
+	void testPotenciaBaseNegativa() {
 		int base=-10;
-		int exp=(int)(Math.random()*(-100-100+1)+100);
-		//assertEquals(Math.pow(base, exp), base, "El resultado es distinto de la base");
+		int exp[]= {2, 3, 4, 5};
+		for (int i=0; i<exp.length; i++) {
+			if (exp[i]%2==0) {
+				assertTrue(Math.pow(base, exp[i])>0);
+			}else {
+				assertTrue(Math.pow(base, exp[i])<0);
+			}
+		}
 	}
 				
 
