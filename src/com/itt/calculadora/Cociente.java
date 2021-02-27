@@ -53,6 +53,9 @@ public final class Cociente {
  *
  */
 	public static double dividirEnteros (int oper1,int oper2) {
+		if(oper2==0) {
+			throw new ArithmeticException();
+		}
 		return (double) oper1/oper2;
 	}
 	
@@ -67,7 +70,9 @@ public final class Cociente {
  * 
  */
 	public static double invertirNum (int oper) {
-
+		if(oper==0) {
+			throw new ArithmeticException();
+		}
 		return (double) 1/oper;
 	}
 	
