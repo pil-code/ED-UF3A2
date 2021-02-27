@@ -84,6 +84,9 @@ public final class Producto {
 	 * 			
 	 */
 	public static double potencia (int base, int exp){
+		if(base==0 & exp ==0) {
+			throw new ArithmeticException("Indeterminación matemática");
+		}
 		return Math.pow(base, exp);
 	}
 }
