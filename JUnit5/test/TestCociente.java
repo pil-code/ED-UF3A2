@@ -19,7 +19,6 @@ import java.util.Random;
 public class TestCociente {
 	
 	private static int[] muestraInt = new int[1000]; //muestra a rellenar con números enteros aleatorios 
-	private static float[] muestraFloat = new float[1000]; //muestra a rellenar con números reales aleatorios tipo float
 	private static double[] muestraDouble = new double[1000]; //muestra a rellenar con números reales aleatorios tipo double
 	private static int contadorTests = 0;
 	
@@ -99,7 +98,6 @@ public class TestCociente {
 	 */
 	@Test
 	void testDividirEnteros() {
-		//TODO revisar la conversión a float de Cociente
 		//Tests de fuerza bruta con números aleatorios
 		for (int i = 0; i < muestraInt.length/2; i ++) {
 			int oper1 = muestraInt[i];
@@ -118,7 +116,6 @@ public class TestCociente {
 			assertEquals(esperado, resultado, "Error al dividir " + oper1 + "/" + oper2);
 		}
 		
-		//TODO revisar la división por 0 en Cociente
 		//Test de división por 0
 		assertThrows(ArithmeticException.class, () -> Cociente.dividirEnteros(1, 0));
 		assertThrows(ArithmeticException.class, () -> Cociente.dividirEnteros(0, 0));
@@ -146,7 +143,6 @@ public class TestCociente {
 			assertEquals(esperado, resultado, "Error al invertir " + oper);
 		}
 		
-		//TODO revisar la inversión de cero en Cociente
 		//Tests de inversión de 0 asumiendo que el comportamiento debe ser igual que Cociente.dividirEnteros(1, oper);
 		assertThrows(ArithmeticException.class, () -> Cociente.invertirNum(0));
 	}
