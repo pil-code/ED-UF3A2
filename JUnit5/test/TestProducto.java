@@ -206,7 +206,7 @@ class TestProducto {
 	 * en cuyo caso el signo será positivo, o impar, resultando en negativo
 	 */
 	@Test
-	void testPotenciaBaseNegativa() {
+	void testPotenciaBaseNegativa() {//Falta completar
 		int base=-10;
 		int exp=(int)(Math.random()*(-100-100+1)+100);
 		//assertEquals(Math.pow(base, exp), base, "El resultado es distinto de la base");
