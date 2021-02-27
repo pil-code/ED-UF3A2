@@ -20,7 +20,7 @@ public class Resta {
 	/**
 	 * Variable que contiene el valor acumulado de todas las restas realizadas con valor acumulado
 	 */
-	public static float resta_acumulada = 0.0F;	
+	public static double resta_acumulada = 0.0F;	
 	
 	/**
 	 * Este método resta dos números reales y devuelve el resultado.

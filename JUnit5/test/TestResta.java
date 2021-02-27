@@ -158,6 +158,7 @@ class TestResta {
 	 * Este método evalua el método Resta.restaAcumulada().
 	 * Comprueba que se resta el número introducido como argumento a la variable estática.<br>
 	 */	
+	
 	@Test
 	void testRestaAcumulada() {
 		double oper = 5.7;
