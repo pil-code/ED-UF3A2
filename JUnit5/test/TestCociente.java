@@ -137,7 +137,6 @@ public class TestCociente {
 			double resultado = Cociente.invertirNum(oper);
 			double esperado = 1.0 / oper;
 			assertEquals(esperado, resultado, "Error al invertir " + oper);
-			assertEquals(1.0, resultado * oper, "Error al multiplicar " + resultado + "*" + oper);
 			
 			//Test cambiando el signo de uno de los operandos para asegurar que se han testeado
 			//tanto números positivos como negativos
@@ -145,7 +144,6 @@ public class TestCociente {
 			resultado = Cociente.invertirNum(oper);
 			esperado = 1.0 / oper;
 			assertEquals(esperado, resultado, "Error al invertir " + oper);
-			assertEquals(1.0, resultado * oper, "Error al multiplicar " + resultado + "*" + oper);
 		}
 		
 		//TODO revisar la inversión de cero en Cociente
