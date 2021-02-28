@@ -71,19 +71,23 @@ class TestResta {
 	
 	@Test
 	void testRestaReales() {
+		System.out.println("	Resta de números reales");
 		for (int i = 0; i < muestraDouble.length/2; i ++) {
+			
+			//Tests de fuerza bruta con números aleatorios
 			double oper1 = muestraDouble[i];
 			double oper2 = muestraDouble[i + muestraDouble.length/2];
 			double resultado = Resta.restaReales(oper1, oper2);
 			assertEquals(oper1-oper2, resultado, "Error al restar " + oper1 + "-" + oper2);
 
-
+			//Test cambiando el signo del primer operador
 			oper1= 320.45;
 			oper2= -57.54;
 			resultado = Resta.restaReales(oper1, oper2);
 			assertEquals(oper1-oper2, resultado, 
 					"Si el primer oper es positivo y el segundo negativo la resta se convierte en suma");
 			
+			//Test cambiando el signo del segundo operador
 			oper1= -320.45;
 			oper2= 57.54;
 			resultado = Resta.restaReales(oper1, oper2);
@@ -101,18 +105,23 @@ class TestResta {
 	
 	@Test
 	void testRestaEnteros() {
+		System.out.println("	Resta de números enteros");
 		for (int i = 0; i < muestraDouble.length/2; i ++) {
+			
+			//Tests de fuerza bruta con números aleatorios
 			int oper1 = muestraInt[i];
 			int oper2 = muestraInt[i + muestraDouble.length/2];
 			int resultado = Resta.restaEnteros(oper1, oper2);
 			assertEquals(oper1-oper2, resultado, "Error al restar " + oper1 + "-" + oper2);
 			
+			//Test cambiando el signo del primer operador
 			oper1= 320;
 			oper2= -57;
 			resultado = Resta.restaEnteros(oper1, oper2);
 			assertEquals(oper1-oper2, resultado, 
 					"Si el primer oper es positivo y el segundo negativo la resta se convierte en suma");
-			
+
+			//Test cambiando el signo del segundo operador
 			oper1= -320;
 			oper2= 57;
 			resultado = Resta.restaEnteros(oper1, oper2);
@@ -130,14 +139,29 @@ class TestResta {
 	
 	@Test
 	void testRestaTres() {
+		System.out.println("	Resta de tres números reales");
 		for (int i = 0; i < muestraDouble.length/2; i ++) {
+			
+			//Tests de fuerza bruta con números aleatorios
 			double oper1 = muestraDouble[i];
 			double oper2 = muestraDouble[i];
 			double oper3 = muestraDouble[i];
 			double resultado = Resta.restaTres(oper1, oper2, oper3);
 			assertEquals(oper1-oper2-oper3, resultado, 
 					"Error al restar " + oper1 + "-" + oper2 + "-" + oper3);
+		}
+			System.out.println("	Suma de números de tres números reales negativos");
+			//Tests con números negativos
+			for (int i = 0; i < muestraDouble.length/2; i ++) {
+				double oper1 = -(Math.abs(muestraDouble[i]));
+				double oper2 = -(Math.abs(muestraDouble[i]));
+				double oper3 = -(Math.abs(muestraDouble[i]));
+				double esperado = -(Math.round(Math.abs(oper1+oper2+oper3)));
+				double resultado = Math.round(Suma.sumaTres(oper1, oper2, oper3));
+				assertEquals(esperado, resultado);
 			
+			
+			//Test cambiando el signo del primer operador
 			oper1= 320;
 			oper2= -57;
 			oper3= -43;
@@ -145,6 +169,7 @@ class TestResta {
 			assertEquals(oper1-oper2-oper3, resultado, 
 					"Si el primer oper es positivo y el segundo negativo la resta se convierte en suma");
 			
+			//Test cambiando el signo del segundo operador
 			oper1= -320;
 			oper2= 57;
 			oper3= 43;
@@ -161,11 +186,14 @@ class TestResta {
 	
 	@Test
 	void testRestaAcumulada() {
+		System.out.println("	Resta acumulada");
+		//Argumento para el método RestaAcumulada de la clase Resta
 		double oper = 5.7;
-		double restaAcumInic= Resta.resta_acumulada;
+		double restaAcumInic= Resta.resta_acumulada;//variable auxiliar para realizar la comparación
 		Resta.restaAcumulado(oper);
 		assertEquals(oper, restaAcumInic-Resta.resta_acumulada, "Error");
 		
+		//Test cambiando el signo del operador
 		oper = -5.7;
 		restaAcumInic= Resta.resta_acumulada;
 		Resta.restaAcumulado(oper);
