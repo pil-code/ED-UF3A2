@@ -66,6 +66,8 @@ public final class Cociente {
  *  
  *  @return El resultado será la inversión del número introducido.
  *  <p>  
+ *  @throws ArithmeticException Si el operando es igual a 0. 
+
  *  Ejemplo: si se introduce el valor 10 = 10/1, el método devolverá 1/10 = 0.1.
  * 
  */
