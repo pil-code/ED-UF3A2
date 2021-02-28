@@ -31,6 +31,9 @@ public class TestSuma {
 			muestraInt[i] = random.nextInt();
 			muestraDouble[i] = random.nextDouble();
 		}
+		System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+		System.out.println("Tests de la clase Suma");
+		System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");	
 	}
 	
 	/**
@@ -55,7 +58,7 @@ public class TestSuma {
 	 */
 	@AfterAll
 	static void endTests() {
-		System.out.println("Se han completado " + contadorTests + " tests. Ha sido un placer testear con usted");
+		System.out.println("Se han completado " + contadorTests + " tests. Ha sido un placer testear con usted\n");
 	}
 	
 

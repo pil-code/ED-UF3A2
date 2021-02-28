@@ -23,7 +23,7 @@ class TestProducto {
 	private static float[] muestraFloat = new float[1000]; //muestra a rellenar con números reales aleatorios tipo float
 	private static int contadorTests=0;
 	/**@BeforeAll
-	 * Este método prepara muestras aleatorias de número de enteros (tipo int) y reales (tipo double y float)
+	 * Este método prepara muestras aleatorias de número de enteros (tipo int) y reales (tipo float)
 	 * para usar en los tests como argumentos de los métodos.
 	 * De esta forma, no hay que generar una muestra en cada test.
 	 */
@@ -35,6 +35,9 @@ class TestProducto {
 			muestraInt[i] = random.nextInt(21)-10;
 			muestraFloat[i] = random.nextFloat()*21-10;
 		}
+		System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+		System.out.println("Tests de la clase Producto");
+		System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");	
 	}
 	
 	/**
@@ -59,7 +62,7 @@ class TestProducto {
 	 */
 	@AfterAll
 	static void endTests() {
-		System.out.println("Se han completado " + contadorTests + " tests. Ha sido un placer testear con usted");
+		System.out.println("Se han completado " + contadorTests + " tests. Ha sido un placer testear con usted\n");
 	}
 	
 	
